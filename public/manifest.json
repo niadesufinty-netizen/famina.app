@@ -1,0 +1,15 @@
+{
+  "name": "FamiHealth",
+  "short_name": "FamiHealth",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7FBFC",
+  "theme_color": "#ff9fb5",
+  "icons": [
+    {
+      "src": "img/log.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -27,7 +27,11 @@ class User extends Authenticatable
         'email',
         'password',
         'foto_profil',
+        'goole_id',
+        'bio',
     ];
+
+    
 
     protected $hidden = [
         'password',
@@ -40,4 +44,5 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    
 }

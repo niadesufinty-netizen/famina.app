@@ -11,17 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('artikel', function (Blueprint $table) {
+        Schema::create('riwayat_bmi', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('slug')->unique();
-            $table->longtext('konten');
-            $table->string('gambar')->nullable();
-            $table->string('kategori')->default('tips');
-            $table->string('deskripsi');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->float('berat_badan');
+            $table->float('tinggi_badan');
+            $table->float('skor_bmi');
+            $table->string('status');
+            $table->string('jenis_kelamin');
             $table->timestamps();
-
-
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('artikel');
+        Schema::dropIfExists('riwayat_bmi');
     }
 };
